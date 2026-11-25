@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-produtos"
+version = "1.0.0"
+description = "API de cadastro de produtos com CI/CD"
+requires-python = ">=3.10"
+dependencies = ["fastapi>=0.110,<1", "pydantic>=2,<3", "uvicorn>=0.29,<1"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
